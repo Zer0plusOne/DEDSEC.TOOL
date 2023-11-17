@@ -19,12 +19,6 @@ O = '\033[33m'
 p = '\033[35m'
 os.system("service tor start")
 os.system("clear")
-def force_fullscreen():
-    if os.name == 'nt':
-        from ctypes import windll
-        windll.kernel32.SetConsoleWindowInfo(
-            sys.stdout.fileno(), True, windll.kernel32.GetConsoleWindow()
-        )
 def options():
     print (" ?. help ")
     print (" 1. ip_info ")
@@ -32,8 +26,33 @@ def options():
     print (" 3. ping ")
     print (" 4. domain_relations ")
     print (" 5. display_system_info ")
+    print (" 6. info_gather ")
+    print (" 7. A_info ")
     print ("99. exit")
     print ("\n")
+
+def workingprocess():
+    print (R+"""
+                                        
+            ████████████████            
+        ████████████████████████        
+      ██████████████████████████        
+      ████████████████████████████      
+    ████████████████████████████████    
+  ██      ██      ██        ██      ██  
+  ██  ██  ████  ████  ████  ██  ██  ██  
+  ██  ████████  ████  ████  ██  ██  ██  
+  ██    ██████  ████  ████  ██  ██  ██  
+  ████    ████  ████  ████  ██      ██  
+  ██████  ████  ████  ████  ██  ██████  
+  ██  ██  ████  ████  ████  ██  ██████  
+  ██      ████  ████        ██  ██████  
+    ████████████████████████████████    
+      ████████████████████████████      
+      ██████████████████████████        
+        ██████████████████████          
+            ██████████████████                                                                                           
+"""+N)
 def banner():
 	print (G+"""
 ░ ▒░▓  ░▒ ▒▒ ▓▒░ ▒░   ░  ░ ▒ ░   ░ ░▒ ▒  ░░▓  ░▒▓▒ ▒ ▒  ▒▒   ▓▒█░░ ▓░▒ ▒  ░░ ▒▒░ ▒ 
@@ -79,6 +98,7 @@ def help():
 ╔\033[94m███████████████████████████████████████████████████████████████\033[93m╗
 ║\033[92m                          help                                 \033[93m║
 ║\033[92m---------------------------------------------------------------\033[93m║
+║                                                               ║
 ║               ?    :  displays this message                   ║
 ║               exit :  hacks FBI                               ║
 ║               ip_info  :  gets ip information                 ║
@@ -86,16 +106,9 @@ def help():
 ║               ping  :  makes ping to servers                  ║
 ║               domain_relations: shows domain relations        ║                               
 ║               port :  port scan                               ║
-║               msf  :	metasploit                              ║
 ║               sys  :	sytem info                              ║
-║               info :  info gather                             ║
-║               set  :  setoolkit                               ║
-║               insta:  instagram bruteforce                    ║
-║               hydra:  use hydra                               ║
-║               fb   :  facebook bruteforce                     ║
-║               gmail:  gmail bruteforce                        ║
-║               cupp :  wordlist maker                          ║
-║                                                               ║
+║               info :  info gather from a target               ║
+║               A_info  :  info gather from a archive           ║
 ║                                                               ║
 ╚\033[94m███████████████████████████████████████████████████████████████\033[93m╝\033[0?m
 	""")          
@@ -124,6 +137,33 @@ def ip_info():
         get_user_input()
     if ipinfo_input == "q":
         os.system("exit")
+def info_gather():
+    workingprocess()
+    print("THIS IS CURRENTLY UNDER DEVELOPMENT")
+    print("Want to see project that can be helpful with that function?")
+    info_input=input ("Enter K if you want to or press P to return to main menu:  ")
+    if info_input == "k":
+        print("\n")
+        print("\n")
+        print("LIST OF PROJECTS [ GITHUB ]")
+        print("--------------------------------------------------------------------")
+        print("https://github.com/sherlock-project")
+        print("https://github.com/Err0r-ICA/InfoWeb")
+        print("https://github.com/trojanx6/user-scan")
+        print("https://github.com/KURO-CODE/DoxTracker/blob/master/DoxTracker.py")
+        print("https://github.com/wishihab/userrecon")
+        print("--------------------------------------------------------------------")
+        print("\n")
+        print("\n")
+        print(R+"THOSE CAN BE USED ILLEGALLY BUT THE AUTHORS ARE NOT RESPONSIBLE FOR THE DAMAGES CAUSED")
+        print(R+"AND SO DOES THE AUTHOR OF THIS TOOL"+N)
+        print("\n")
+        info_input=input ("Enter P to return to main menu:  ")
+        if info_input == "p":
+            os.system("cls")
+            banner()
+            options()
+            get_user_input()
 def portscanner():
     print("")
     print("Ingresa la IP:")
@@ -173,6 +213,8 @@ def display_system_info():
     import subprocess
     url = subprocess.getoutput("systeminfo")
     print(url)
+    print("\n")
+    print(G+" If you desire can save the output in a file pressing S "+N)
     sysdys_input=input ("Press e to return to main menu, press q to exit:  ")
     if sysdys_input == "e":
         os.system("cls")
@@ -181,22 +223,63 @@ def display_system_info():
         get_user_input()
     if sysdys_input == "q":
         os.system("exit")
+    if sysdys_input == "s":
+        with open("systeminfo.txt", "w") as file:
+            file.write(url)
+            file.close()
+            print("File saved!")
+            print("file saved as: systeminfo.txt")
+            time.sleep(5)
+            os.system("cls")
+            banner()
+            sysdys_input=input ("Press e to return to main menu, press q to exit:  ")
+            if sysdys_input == "e":
+                os.system("cls")
+                banner()
+                options()
+                get_user_input()
+            if sysdys_input == "q":
+                os.system("exit")
+
+def meta_info():
+    workingprocess()
+    print("THIS IS CURRENTLY UNDER DEVELOPMENT")
+    print(R+"CURRENTLY THERE ARE NO PROJECTS AVALIBLE FOR THIS FUNCTION"+N)
+    print("Please try again later, now entering to main menu")
+    time.sleep(5)
+    os.system("cls")
+    banner()
+    options()
+    get_user_input()
 def get_user_input():
 
     choice=input("Ingresa un numero para elegir una de las opciones: ")
     if choice == "?":
+        os.system("cls")
         help()
     if choice == "1":
+        os.system("cls")
         ip_info()
     if choice == "2":
+        os.system("cls")
         portscanner()
     if choice == "3":
+        os.system("cls")
         ping()
     if choice == "4":
+        os.system("cls")
         domain_relations()
     if choice == "5":
+        os.system("cls")
         display_system_info()
+    if choice == "6":
+        os.system("cls")
+        info_gather()
+    if choice == "7":
+        os.system("cls")
+        meta_info()
     if choice == "99":
+        os.system("cls")
         exit()
 banner()
 options()
