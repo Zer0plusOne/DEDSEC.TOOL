@@ -23,9 +23,9 @@ def help():
 	""")          
     help_input=input ("Press e to return to main menu, press q to exit ")
     if help_input == "e":
-        os.system("cls")
+        os.system("clear")
         asciis.banner()
         main.options()
         main.get_user_input()
     if help_input == "q":
-        os.system("exit")  
+        os.system("exit")

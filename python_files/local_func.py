@@ -17,7 +17,7 @@ def display_system_info():
     print(G+" If you desire can save the output in a file pressing S "+N)
     sysdys_input=input ("Press e to return to main menu, press q to exit:  ")
     if sysdys_input == "e":
-        os.system("cls")
+        os.system("clear")
         asciis.banner()
         main.options()
         main.get_user_input()
@@ -30,11 +30,11 @@ def display_system_info():
             print("File saved!")
             print("file saved as: systeminfo.txt")
             time.sleep(5)
-            os.system("cls")
+            os.system("clear")
             asciis.banner()
             sysdys_input=input ("Press e to return to main menu, press q to exit:  ")
             if sysdys_input == "e":
-                os.system("cls")
+                os.system("clear")
                 asciis.banner()
                 main.options()
                 main.get_user_input()

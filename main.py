@@ -11,6 +11,7 @@ import python_files.net_func as net_func
 import python_files.local_func as local_func
 import python_files.archives_func as archives_func
 import python_files.osint as osint
+import python_files.dependencies as dependencies
 
 r = '\033[31m'
 W = '\033[90m'
@@ -25,8 +26,9 @@ Bl = '\033[30m'
 O = '\033[33m'
 p = '\033[35m'
 
-os.system("cls")
+os.system("clear")
 def options():
+    print (" !!!. If fist time using the tool in this device, install dependencies ")
     print (" ?. help ")
     print (" 1. ip_info ")
     print (" 2. portscanner ")
@@ -41,37 +43,41 @@ def options():
 def get_user_input():
 
     choice=input("Ingresa un numero para elegir una de las opciones: ")
+    if choice == "!!!":
+        os.system("clear")
+        dependencies()
     if choice == "?":
-        os.system("cls")
+        os.system("clear")
         help.help()
     if choice == "1":
-        os.system("cls")
+        os.system("clear")
         net_func.ip_info()
     if choice == "2":
-        os.system("cls")
+        os.system("clear")
         net_func.portscanner()
     if choice == "3":
-        os.system("cls")
+        os.system("clear")
         net_func.ping()
     if choice == "4":
-        os.system("cls")
+        os.system("clear")
         net_func.domain_relations()
     if choice == "5":
-        os.system("cls")
+        os.system("clear")
         local_func.display_system_info()
     if choice == "6":
-        os.system("cls")
-        osint.info_gather()
+        os.system("clear")
+        osint
     if choice == "7":
-        os.system("cls")
+        os.system("clear")
         archives_func.meta_info()
     if choice == "99":
-        os.system("cls")
+        os.system("clear")
         exit()
     if choice == "":
         print("BLANK PARAM. PLEASE FIX.")
         time.sleep(2)
         get_user_input()
+    
 
 asciis.banner()
 options()

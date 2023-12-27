@@ -1,6 +1,5 @@
 import main
 import python_files.asciis as asciis
-import main
 import os
 
 N = '\033[0m'
