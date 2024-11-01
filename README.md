@@ -118,4 +118,4 @@ SOFTWARE.
 ### Discord: @zer0who
 
 
-![Logo](https://th.bing.com/th/id/OIP.G8a6ubXns6IToQIZCgLGwQHaEK?rs=1&pid=ImgDetMain)
+![Logo](https://media1.tenor.com/images/044b65d56501cc470ece8ede12b2b1dd/tenor.gif?itemid=17189298)
