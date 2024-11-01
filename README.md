@@ -118,4 +118,4 @@ SOFTWARE.
 ### Discord: @zer0who
 
 
-![Logo]([https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c167faae-9537-4b4d-a6b3-2a3b9fa80cb2/db019p5-7a48b5b1-71af-45d9-96e5-9808cee53e70.png/v1/fill/w_1024,h_576,q_75,strp/dedsec_by_default_01101100_011-db019p5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl0sIm9iaiI6W1t7InBhdGgiOiIvZi9jMTY3ZmFhZS05NTM3LTRiNGQtYTZiMy0yYTNiOWZhODBjYjIvZGIwMTlwNS03YTQ4YjViMS03MWFmLTQ1ZDktOTZlNS05ODA4Y2VlNTNlNzAucG5nIiwid2lkdGgiOiI8PTEwMjQiLCJoZWlnaHQiOiI8PTU3NiJ9XV19.P20RBbbtjs1KgML2Ctx9_ySYf8JWI77c1S5el8Aj6Uk](https://th.bing.com/th/id/OIP.G8a6ubXns6IToQIZCgLGwQHaEK?rs=1&pid=ImgDetMain))
+![Logo](https://th.bing.com/th/id/OIP.G8a6ubXns6IToQIZCgLGwQHaEK?rs=1&pid=ImgDetMain)
