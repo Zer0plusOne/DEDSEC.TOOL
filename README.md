@@ -25,23 +25,23 @@ This is a project actually under developement, so i leave a quick list of all th
 
 |  Developement Status | Difficulty Level (Developing) | Functionality| Description |
 |:--------------------:|:----------------:|--------------|-------------|
-| 🔴 | Easy| **Show detailed information about the system where it runs**| This feature will provide information about the hardware, software, and system configurations of the device running the tool.|
-| 🔴 | Easy | **Ping execution for specified targets**| A simple utility that allows the user to ping an IP address or domain name to check its availability and latency.|
-| 🔴 | Medium| **Provide information about a specific IP**| This function will gather and display information related to the specified IP address, such as geographical location, ISP, and other relevant details.|
-| 🔴 | Medium| **Scan ports of a specific IP**| This feature will check the open ports on a given IP address, helping users to identify potential vulnerabilities.|
-| 🔴 | Medium| **Search relationships between web domains**| This functionality will analyze domain names and provide insights into possible connections or relationships between different domains.|
-| 🔴 | Hard| **OSINT features similar to existing repositories**| This will include various OSINT functionalities such as data gathering, user tracking, and additional intelligence-gathering capabilities based on public information.|
-| 🔴 | Hard| **Integration with Metasploit for reverse shells**| This feature will allow users to send reverse shells to specified IPs and ports, utilizing Metasploit’s capabilities for exploitation.|
+| 🟢 | Easy| **Show detailed information about the system where it runs**| This feature will provide information about the hardware, software, and system configurations of the device running the tool.|
+| 🟢 | Easy | **Ping execution for specified targets**| A simple utility that allows the user to ping an IP address or domain name to check its availability and latency.|
+| 🟢 | Medium| **Provide information about a specific IP**| This function will gather and display information related to the specified IP address, such as geographical location, ISP, and other relevant details.|
+| 🟠 | Medium| **Scan ports of a specific IP**| This feature will check the open ports on a given IP address, helping users to identify potential vulnerabilities.|
+| 🟡 | Medium| **Search relationships between web domains**| This functionality will analyze domain names and provide insights into possible connections or relationships between different domains.|
+| 🟠 | Hard| **OSINT features similar to existing repositories**| This will include various OSINT functionalities such as data gathering, user tracking, and additional intelligence-gathering capabilities based on public information.|
+| 🟡 | Hard| **Integration with Metasploit for reverse shells**| This feature will allow users to send reverse shells to specified IPs and ports, utilizing Metasploit’s capabilities for exploitation.|
 | 🔴 | Insane| **Network traffic analysis**| This advanced feature will monitor and analyze network traffic in real-time, providing insights into data flows and potential security issues.|
-| 🔴 | Insane| **Vulnerability scanning**| Implementing a tool that scans systems or networks for known vulnerabilities, helping users to enhance their security posture.|
+| 🟠 | Insane| **Vulnerability scanning**| Implementing a tool that scans systems or networks for known vulnerabilities, helping users to enhance their security posture.|
 | 🔴 | Insane| **Automated security audits** | This feature will automate the process of conducting security audits, generating reports based on the findings.|
-| 🔴 | CEH| **Malware analysis**| A feature dedicated to analyzing suspected malware, determining its behavior, and identifying potential threats to systems.|
+| 🟠 | CEH| **Malware analysis**| A feature dedicated to analyzing suspected malware, determining its behavior, and identifying potential threats to systems.|
 | 🔴 | CEH| **Simulation of attacks**| This will allow users to simulate various types of cyberattacks in a controlled environment to test the resilience of systems.|
 | 🔴 | CEH| **Password management**| An integrated password manager that helps users store, generate, and manage passwords securely.|
-| 🔴 | CEH| **Phishing module**| A feature designed to create phishing simulations for educational purposes, helping users learn to recognize and avoid phishing attacks.|
+| 🟠 | CEH| **Phishing module**| A feature designed to create phishing simulations for educational purposes, helping users learn to recognize and avoid phishing attacks.|
 | 🔴 | CEH| **Logging monitoring**| This function will monitor system logs for suspicious activities, helping users to detect potential threats early.|
-| 🔴 | CEH| **Geolocation services integration**| Integration with geolocation services to provide geographical context for IP addresses and domains.|
-| 🔴 | CEH| **Training and education in cybersecurity**| Resources and tools for educating users about cybersecurity best practices and potential threats.|
+| 🟡 | CEH| **Geolocation services integration**| Integration with geolocation services to provide geographical context for IP addresses and domains.|
+| 🟠 | CEH| **Training and education in cybersecurity**| Resources and tools for educating users about cybersecurity best practices and potential threats.|
 
 ## Installation
 
