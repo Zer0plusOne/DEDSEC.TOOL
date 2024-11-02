@@ -74,7 +74,9 @@ cd DEDSEC.TOOL
 Executing the tool
 
 ```bash
+# Give execution permision
 chmod +x DEDSEC.TOOL.sh
+# Execute the launcher
 ./DEDSEC.TOOL
 ```
 
