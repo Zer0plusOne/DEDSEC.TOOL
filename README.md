@@ -74,13 +74,14 @@ cd DEDSEC.TOOL
 Executing the tool
 
 ```bash
-python3 main.py
+chmod +x DEDSEC.TOOL.sh
+./DEDSEC.TOOL
 ```
 
 If having issues with the permisions (strange but could happen)
 
 ```bash
-sudo python3 main.py
+sudo ./DEDSEC.TOOL
 ```
 
 ## Usage of the tool
