@@ -3,8 +3,9 @@ import alive_progress as ap
 import banners
 import os
 import menu
+import SComm as SC
 
-os.system("cls")
+SC.clear_console()
 
 LoadingLines = [("smooth", 1732, 1.3), ("brackets", 476, 0.9), ("filling", 291, 0.3)]
 
@@ -23,5 +24,5 @@ print(banners.BANNER_1)
 for LoadingLine, longitude, timeLoading in LoadingLines:
     LoadingTool1(LoadingLine, longitude, timeLoading)
 
-os.system("cls")
+SC.clear_console()
 menu.mainMenu()
