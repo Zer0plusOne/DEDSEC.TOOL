@@ -6,6 +6,8 @@ import ipInfoGather as IpInfo
 import os
 from time import sleep
 
+import SComm as SC
+
 def mainMenu():
     print(banners.BANNER_2)
     print("╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────")
@@ -20,24 +22,26 @@ def mainMenu():
     print(option)
     
     if option == "1":
-        os.system("cls")
+        SC.clear_console
         S_I.SystemInfo()
     elif option == "2":
-        os.system("cls")
+        SC.clear_console
         P.pingMenu()
     elif option == "3":
-        os.system("cls")
+        SC.clear_console
         IpInfo.IpInfoGather()
     elif option == "4":
+        SC.clear_console
         print("Has elegido: Cuatro")
     elif option == "5":
+        SC.clear_console
         print("Has elegido: Cinco")
     elif option == "x" or "X":
-        os.system("cls")
+        SC.clear_console
         I.show_info()
     else:
         print("Option not Valid, reloading menu.")
         sleep(2)
-        os.system("cls")
+        SC.clear_console()
         mainMenu()
 
