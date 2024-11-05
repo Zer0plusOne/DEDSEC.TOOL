@@ -28,7 +28,7 @@ This is a project actually under developement, so i leave a quick list of all th
 | 🔵 | Easy| **Show detailed information about the system where it runs**| This feature will provide information about the hardware, software, and system configurations of the device running the tool.|
 | 🔵 | Easy | **Ping execution for specified targets**| A simple utility that allows the user to ping an IP address or domain name to check its availability and latency.|
 | 🔵 | Medium| **Provide information about a specific IP**| This function will gather and display information related to the specified IP address, such as geographical location, ISP, and other relevant details.|
-| 🟠 | Medium| **Scan ports of a specific IP**| This feature will check the open ports on a given IP address, helping users to identify potential vulnerabilities.|
+| 🔵 | Medium| **Scan ports of a specific IP**| This feature will check the open ports on a given IP address, helping users to identify potential vulnerabilities.|
 | 🟡 | Medium| **Search relationships between web domains**| This functionality will analyze domain names and provide insights into possible connections or relationships between different domains.|
 | 🟠 | Hard| **OSINT features similar to existing repositories**| This will include various OSINT functionalities such as data gathering, user tracking, and additional intelligence-gathering capabilities based on public information.|
 | 🟡 | Hard| **Integration with Metasploit for reverse shells**| This feature will allow users to send reverse shells to specified IPs and ports, utilizing Metasploit’s capabilities for exploitation.|
