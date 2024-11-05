@@ -3,7 +3,7 @@ import systemInfo as S_I
 import pinger as P
 import info as I
 import ipInfoGather as IpInfo
-import os
+import portScan as PC
 from time import sleep
 
 import SComm as SC
@@ -14,7 +14,7 @@ def mainMenu():
     print("│ \033[0;31m𑁍\033[0m \033[0;35m1.\033[0m \033[0;32mDisplay system Info\033[0m")
     print("│ \033[0;31m𑁍\033[0m \033[0;35m2.\033[0m \033[0;32mPING\033[0m")
     print("│ \033[0;31m𑁍\033[0m \033[0;35m3.\033[0m \033[0;32mIp Info Gather\033[0m")
-    print("│ \033[0;31m𑁍\033[0m \033[0;35m4.\033[0m \033[0;32mWIP\033[0m")
+    print("│ \033[0;31m𑁍\033[0m \033[0;35m4.\033[0m \033[0;32mPort Scanner\033[0m")
     print("│ \033[0;31m𑁍\033[0m \033[0;35m5.\033[0m \033[0;32mWIP\033[0m")
     print("│ \033[0;31m𑁍\033[0m \033[0;35mX.\033[0m \033[0;32mINFO\033[0m")
     print("╰─────────────────────────")
@@ -32,7 +32,7 @@ def mainMenu():
         IpInfo.IpInfoGather()
     elif option == "4":
         SC.clear_console
-        print("Has elegido: Cuatro")
+        PC.PortScan()
     elif option == "5":
         SC.clear_console
         print("Has elegido: Cinco")

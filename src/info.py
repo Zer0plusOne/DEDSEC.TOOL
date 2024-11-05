@@ -1,11 +1,10 @@
-import banners
 
 
 def show_info():
     # Información del programa
-    version = "v1.0"
+    version = "v alpha_1.0.1"
     developer = "Zer0plusOne"
-    last_updated = "03/11/2024 00:40"
+    last_updated = "05/11/2024 22:12"
     repository = "https://github.com/Zer0plusOne/DEDSEC.TOOL"
 
     info_text = (

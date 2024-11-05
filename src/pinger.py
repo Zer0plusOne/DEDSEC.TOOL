@@ -1,23 +1,25 @@
-import os
+
 import subprocess
 from scapy.all import IP, ICMP, sr1
 import time
 from time import sleep
 import banners
+import SComm as SC
+
 
 def realizar_ping(destino, num_pings=10):
     print(f"\nDoing {num_pings} pings to {destino}:\n")
     for i in range(num_pings):
-        # Ejecuta el comando ping usando subprocess
+        
         resultado = subprocess.run(
             ["ping", "-c", "1", destino],
             capture_output=True,
             text=True
         )
         
-        # Verifica si el ping fue exitoso
+        
         if "1 packets transmitted, 1 received" in resultado.stdout:
-            # Extrae y muestra el tiempo de respuesta
+            
             tiempo = resultado.stdout.split("time=")[1].split(" ")[0]
             print(f"Ping {i + 1}: Response in {tiempo} ms")
         else:
@@ -28,7 +30,7 @@ def realizar_traceroute(destino, max_saltos=30):
     print(f"\nDoing traceroute to {destino} with a max of {max_saltos} jumps:\n")
     
     for ttl in range(1, max_saltos + 1):
-        # Crea el paquete IP con el TTL específico y el destino
+        
         paquete = IP(dst=destino, ttl=ttl) / ICMP()
         
         # Mide el tiempo de envío y recepción
@@ -36,16 +38,16 @@ def realizar_traceroute(destino, max_saltos=30):
         respuesta = sr1(paquete, timeout=2, verbose=0)
         fin = time.time()
         
-        # Calcula el tiempo de respuesta
-        rtt = (fin - inicio) * 1000  # Convertir a milisegundos
+        
+        rtt = (fin - inicio) * 1000  
         
         if respuesta is None:
             print(f"{ttl}: * * * (No Response)")
         else:
-            # Obtiene la IP de la respuesta y muestra el RTT
+            
             print(f"{ttl}: {respuesta.src} - Response time: {rtt:.2f} ms")
             
-            # Si hemos alcanzado el destino, terminamos
+            
             if respuesta.src == destino:
                 print("\nTraceroute completed.")
                 break
@@ -56,7 +58,7 @@ def realizar_traceroute(destino, max_saltos=30):
 def pingMenu():
     print(banners.BANNER_4)
     destino = input("\033[0;35m❱\033[0;32m❱\033[0;35m❱\033[0m Ip objective: ")
-    os.system("cls")
+    SC.clear_console()
     print(banners.BANNER_4)
     while True:
         print("╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────")
