@@ -1,10 +1,16 @@
-
+import os
+import shutil
 import subprocess
-from scapy.all import IP, ICMP, sr1
 import time
 from time import sleep
+
 import banners
 import SComm as SC
+
+try:
+    from scapy.all import ICMP, IP, sr1  # type: ignore
+except ModuleNotFoundError:  # pragma: no cover - executed only when scapy is missing
+    ICMP = IP = sr1 = None  # type: ignore
 
 
 def realizar_ping(destino, num_pings=10):
@@ -26,33 +32,55 @@ def realizar_ping(destino, num_pings=10):
             print(f"Ping {i + 1}: No Response")
     print("\nPing completado.\n")
 
-def realizar_traceroute(destino, max_saltos=30):
+def _traceroute_with_scapy(destino, max_saltos):
     print(f"\nDoing traceroute to {destino} with a max of {max_saltos} jumps:\n")
-    
+
     for ttl in range(1, max_saltos + 1):
-        
         paquete = IP(dst=destino, ttl=ttl) / ICMP()
-        
-        # Mide el tiempo de envío y recepción
         inicio = time.time()
         respuesta = sr1(paquete, timeout=2, verbose=0)
         fin = time.time()
-        
-        
-        rtt = (fin - inicio) * 1000  
-        
+
+        rtt = (fin - inicio) * 1000
+
         if respuesta is None:
             print(f"{ttl}: * * * (No Response)")
         else:
-            
             print(f"{ttl}: {respuesta.src} - Response time: {rtt:.2f} ms")
-            
-            
+
             if respuesta.src == destino:
                 print("\nTraceroute completed.")
                 break
     else:
         print("\nTraceroute finished without arriving to destination.")
+
+
+def _traceroute_with_command(destino, max_saltos):
+    print(f"\nDoing traceroute to {destino} with a max of {max_saltos} jumps:\n")
+
+    traceroute_cmd = shutil.which("traceroute") or shutil.which("tracepath")
+    if traceroute_cmd is None:
+        print("Traceroute command not available on this system.")
+        return
+
+    if os.path.basename(traceroute_cmd) == "tracepath":
+        cmd = [traceroute_cmd, destino]
+    else:
+        cmd = [traceroute_cmd, "-m", str(max_saltos), "-n", destino]
+
+    try:
+        result = subprocess.run(cmd, check=False, text=True, capture_output=True)
+        output = result.stdout or result.stderr
+        print(output)
+    except OSError as error:
+        print(f"Error executing traceroute command: {error}")
+
+
+def realizar_traceroute(destino, max_saltos=30):
+    if IP and ICMP and sr1:
+        _traceroute_with_scapy(destino, max_saltos)
+    else:
+        _traceroute_with_command(destino, max_saltos)
 
 
 def pingMenu():
